@@ -1,0 +1,159 @@
+/* China Through My Eyes: all styles are written in plain CSS. */
+:root {
+  --paper: #f7f4ed;
+  --green: #24382e;
+  --rust: #a34e34;
+  --muted: #647168;
+  --line: #dcded3;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--green); background: var(--paper); font-family: Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+button { font: inherit; cursor: pointer; }
+[hidden] { display: none !important; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--rust); outline-offset: 3px; }
+h1, h2, h3 { font-family: Georgia, serif; letter-spacing: -.04em; }
+h1, h2, h3, p { margin-top: 0; }
+em { color: var(--rust); }
+.container { width: min(1240px, calc(100% - 80px)); margin: auto; }
+.eyebrow { font-size: 11px; font-weight: bold; letter-spacing: 2px; color: var(--rust); }
+
+/* Header shared by the two pages */
+.site-header { border-bottom: 1px solid var(--line); }
+.header-row { min-height: 82px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.logo { font-size: 12px; font-weight: bold; letter-spacing: 1px; white-space: nowrap; }
+.logo-symbol { display: inline-block; background: var(--rust); color: white; border-radius: 50%; padding: 11px; margin-right: 8px; font-family: Georgia, serif; font-size: 16px; }
+.logo-light { font-weight: normal; }
+nav { display: flex; gap: 24px; }
+nav a { font-size: 13px; padding: 9px 0; }
+nav .current { color: var(--rust); border-bottom: 2px solid var(--rust); }
+nav a:hover, .back-link a:hover { color: var(--rust); }
+
+/* Home: introduction and the three photographs */
+.hero { display: grid; grid-template-columns: 43% 57%; margin-top: 34px; margin-bottom: 100px; min-height: 610px; }
+.hero-text { background: #ece9de; padding: 54px 48px; display: flex; flex-direction: column; justify-content: center; }
+.intro-word { margin: 36px 0 12px; font: italic 20px Georgia, serif; }
+.hero h1 { font-size: clamp(55px, 6.3vw, 91px); line-height: 1; margin-bottom: 25px; }
+.hero-description { max-width: 380px; line-height: 1.9; color: var(--muted); font-size: 14px; }
+.button { align-self: flex-start; display: inline-block; background: var(--green); color: white; padding: 17px 23px; margin-top: 14px; font-size: 13px; }
+.button:hover { background: var(--rust); }
+.small-note { margin: 55px 0 0; font-size: 10px; letter-spacing: 1.5px; color: var(--muted); }
+.hero-pictures { min-width: 0; position: relative; display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; }
+.hero-pictures img { height: 100%; object-fit: cover; }
+.photo-note { position: absolute; left: 30px; bottom: 30px; padding: 20px 24px; color: white; background: rgba(28, 50, 43, .9); font: 26px/1.3 Georgia, serif; }
+.photo-note em { color: #ecc2a9; }
+
+/* Home: personal story */
+.story { display: grid; grid-template-columns: 31% 1fr; gap: 25px; margin-bottom: 105px; }
+.story h2, .places h2, .food-section h2 { font-size: clamp(42px, 5vw, 72px); line-height: 1.08; }
+.story p:not(.eyebrow) { color: var(--muted); line-height: 1.85; max-width: 730px; }
+.story p.large-text { font: 29px/1.48 Georgia, serif; color: var(--green); }
+
+/* Home: the three places */
+.places { margin-bottom: 105px; }
+.places h2 { margin-bottom: 33px; }
+.place-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.preview img { height: 370px; object-fit: cover; }
+.preview .eyebrow { margin: 22px 0 8px; }
+.preview h3 { display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 20px; font-size: 31px; }
+.preview h3 small, .place-card h3 small { font: 15px Arial, sans-serif; letter-spacing: 0; color: var(--muted); }
+.preview h3 span { margin-left: auto; font-family: Arial, sans-serif; font-size: 22px; }
+.preview:hover h3 { color: var(--rust); }
+
+/* Home: foods */
+.food-section { background: #e9e6da; padding: 87px 0; }
+.food-layout { display: grid; grid-template-columns: 42% 1fr; gap: 60px; }
+.food-layout > div > p:last-child { color: var(--muted); line-height: 1.8; }
+.food-list p { display: grid; grid-template-columns: 135px 1fr; gap: 18px; padding: 25px 0; margin: 0; border-bottom: 1px solid #bac2b7; line-height: 1.7; }
+.food-list p:first-child { border-top: 1px solid #bac2b7; }
+.food-list strong { font-size: 10px; color: var(--rust); letter-spacing: 1px; padding-top: 5px; }
+
+/* Explore page */
+.explore-intro { padding: 85px 0 80px; display: grid; grid-template-columns: 1fr 260px; align-items: end; gap: 60px; }
+.explore-intro h1 { font-size: clamp(58px, 7.5vw, 108px); line-height: 1.02; margin-bottom: 0; }
+.explore-intro > p { font: 19px/1.6 Georgia, serif; }
+.destinations { border-top: 1px solid var(--line); padding: 30px 0 85px; }
+.filter-top { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 25px; }
+.filter-top h2 { font-size: 27px; margin-bottom: 8px; }
+.filter-top p { margin: 0; color: var(--muted); font-size: 13px; }
+.filters { display: flex; flex-wrap: wrap; gap: 9px; }
+.filters button { background: transparent; border: 1px solid #b3bdb2; border-radius: 24px; padding: 11px 16px; color: var(--green); font-size: 12px; }
+.filters button:hover, .filters .selected { background: var(--green); color: white; }
+#filter-status { font-size: 11px; font-weight: bold; letter-spacing: 1.5px; color: var(--rust); margin: 35px 0 20px; text-transform: uppercase; }
+.destination-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 20px; }
+.place-card { background: #fffdfa; border: 1px solid #e1e3db; min-width: 0; }
+.place-card > img { height: 290px; object-fit: cover; }
+.card-text { padding: 26px; }
+.card-text h3 { font-size: clamp(35px, 3.8vw, 51px); margin: 15px 0 9px; }
+.place-card h3 small { display: block; margin-top: 6px; }
+.card-text > p { font-size: 14px; color: #526258; line-height: 1.8; }
+.card-text .eyebrow { font-size: 10px; color: var(--rust); }
+.card-text .card-subtitle { font: italic 18px Georgia, serif; color: var(--rust); }
+.card-note, .card-food { border-top: 1px solid var(--line); padding-top: 17px; }
+.card-text strong { display: block; font-size: 11px; letter-spacing: 1px; color: var(--rust); text-transform: uppercase; }
+.back-link { padding-bottom: 55px; font-size: 14px; font-weight: bold; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); }
+.footer-row { padding: 34px 0; display: flex; justify-content: space-between; gap: 20px; font-size: 12px; }
+.footer-row span:first-child { font-weight: bold; letter-spacing: 1px; }
+.footer-row span:nth-child(2) { color: var(--muted); }
+
+/* Tablet and mobile */
+@media (max-width: 950px) {
+  .container { width: calc(100% - 48px); }
+  .hero { grid-template-columns: 46% 54%; min-height: 530px; }
+  .hero-text { padding: 30px; }
+  .hero h1 { font-size: clamp(51px, 7vw, 68px); }
+  .preview img { height: 290px; }
+  .food-layout { gap: 35px; }
+  .destination-grid { gap: 12px; }
+  .place-card > img { height: 250px; }
+  .card-text { padding: 17px; }
+  .card-text h3 { font-size: 35px; }
+  .explore-intro { grid-template-columns: 1fr 220px; gap: 25px; }
+}
+@media (max-width: 700px) {
+  .container { width: calc(100% - 32px); }
+  .header-row { min-height: 70px; }
+  .logo { font-size: 10px; letter-spacing: 0; }
+  .logo-symbol { padding: 8px; margin-right: 3px; }
+  nav { gap: 15px; }
+  .hero { grid-template-columns: 1fr; margin-top: 16px; margin-bottom: 70px; }
+  .hero-text { padding: 35px 28px; }
+  .intro-word { margin-top: 17px; }
+  .hero h1 { font-size: clamp(56px, 13vw, 83px); }
+  .small-note { margin-top: 30px; }
+  .hero-pictures { height: 360px; }
+  .photo-note { left: 16px; bottom: 16px; font-size: 21px; padding: 15px; }
+  .story { grid-template-columns: 1fr; gap: 8px; margin-bottom: 70px; }
+  .story p.large-text { font-size: 24px; }
+  .places { margin-bottom: 70px; }
+  .place-grid { grid-template-columns: 1fr; }
+  .preview img { height: 350px; }
+  .food-section { padding: 65px 0; }
+  .food-layout { grid-template-columns: 1fr; gap: 24px; }
+  .food-list p { grid-template-columns: 1fr; gap: 3px; }
+  .explore-intro { grid-template-columns: 1fr; gap: 18px; padding: 65px 0; }
+  .explore-intro h1 { font-size: clamp(50px, 12vw, 76px); }
+  .explore-intro > p { max-width: 480px; }
+  .destination-grid { grid-template-columns: 1fr; gap: 24px; }
+  .place-card > img { height: 360px; }
+  .card-text { padding: 24px; }
+  .card-text h3 { font-size: 48px; }
+  .footer-row { flex-direction: column; gap: 10px; }
+}
+@media (max-width: 370px) {
+  .logo-light { display: none; }
+  .hero h1 { font-size: 55px; }
+  .preview img, .place-card > img { height: 310px; }
+}
+
+/* Small adjustments for the new photographs */
+.hero-pictures img { min-width: 0; }
+.hero-pictures img:nth-child(1) { object-position: 51% 56%; }
+.hero-pictures img:nth-child(2) { object-position: 50% 56%; }
+.hero-pictures img:nth-child(3) { object-position: 55% 48%; }
+.preview[href$="#inner-mongolia"] img { object-position: 50% 67%; }
+.place-card#inner-mongolia > img { object-position: 50% 56%; }

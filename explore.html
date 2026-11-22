@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Shenzhen, Xi'an and Inner Mongolia through food, history and landscapes.">
+  <title>China Through My Eyes | Explore</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html"><span class="logo-symbol">中</span> CHINA <span class="logo-light">/ THROUGH MY EYES</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a class="current" href="explore.html">Explore</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container explore-page">
+    <section class="explore-intro">
+      <div>
+        <p class="eyebrow">THREE PLACES I WANTED TO SHARE</p>
+        <h1>Some places<br><em>stay with you.</em></h1>
+      </div>
+      <p>I like Shenzhen's energy, the history and food in Xi'an, and the huge open spaces of Inner Mongolia. Here is why I chose each one.</p>
+    </section>
+
+    <section class="destinations">
+      <div class="filter-top">
+        <div>
+          <h2>Pick a place</h2>
+          <p>Click a button to show one place at a time.</p>
+        </div>
+        <div class="filters">
+          <button class="selected" data-place="all" type="button" aria-pressed="true">All places</button>
+          <button data-place="shenzhen" type="button" aria-pressed="false">Shenzhen</button>
+          <button data-place="xian" type="button" aria-pressed="false">Xi'an</button>
+          <button data-place="inner-mongolia" type="button" aria-pressed="false">Inner Mongolia</button>
+        </div>
+      </div>
+      <p id="filter-status" aria-live="polite">Showing all 3 places</p>
+
+      <div class="destination-grid">
+        <article class="place-card" id="shenzhen" data-place="shenzhen">
+          <img src="assets/shenzhen-bay.webp" alt="Shenzhen skyscrapers, green hills and the bay">
+          <div class="card-text">
+            <p class="eyebrow">SHENZHEN / GUANGDONG</p>
+            <h3>Shenzhen <small>深圳</small></h3>
+            <p class="card-subtitle">Busy streets, with quiet places nearby.</p>
+            <p>Shenzhen is my hometown. It's a young city with a fast pace, and people take their time seriously. But I can always find somewhere to relax — Dameisha Beach for the sea, Wutong Mountain for a hike, or OH Bay for the evening lights.</p>
+            <p class="card-note"><strong>My favorite part:</strong> Mountains, beaches and city views all in one place.</p>
+            <p class="card-food"><strong>Food I'd recommend:</strong> Yum cha (dim sum) and siu mei (Cantonese roast meats).</p>
+          </div>
+        </article>
+
+        <article class="place-card" id="xian" data-place="xian">
+          <img src="assets/xian-bell-tower.webp" alt="Illuminated historic tower in Xi'an, photographed at dusk">
+          <div class="card-text">
+            <p class="eyebrow">XI'AN / SHAANXI</p>
+            <h3>Xi'an <small>西安</small></h3>
+            <p class="card-subtitle">Old streets and really good noodles.</p>
+            <p>Xi'an feels less rushed than Shenzhen. It was the capital of several Chinese dynasties, so there is history everywhere, from the City Wall and Bell Tower to the Terracotta Warriors. I like taking my time in the old streets and stopping for noodles along the way.</p>
+            <p class="card-note"><strong>My favorite part:</strong> The history, the slower feeling, and all the different noodles.</p>
+            <p class="card-food"><strong>Food I'd recommend:</strong> Biangbiang noodles and yangrou paomo (lamb soup with bread).</p>
+          </div>
+        </article>
+
+        <article class="place-card" id="inner-mongolia" data-place="inner-mongolia">
+          <img src="assets/inner-mongolia-hills.webp" alt="Green rolling hills and grazing animals in Inner Mongolia">
+          <div class="card-text">
+            <p class="eyebrow">INNER MONGOLIA / NATURE</p>
+            <h3>Inner Mongolia <small>内蒙古</small></h3>
+            <p class="card-subtitle">Grasslands, lakes and a slower pace.</p>
+            <p>Inner Mongolia is a huge autonomous region, with grasslands, forests and deserts. The views feel very different from a busy city. Xiangshawan near Ordos is especially interesting to me: there are even outdoor swimming pools at a resort in the desert.</p>
+            <p class="card-note"><strong>My favorite part:</strong> The green fields and open views, so different from a big city.</p>
+            <p class="card-food"><strong>Food I'd recommend:</strong> Lamb shaomai and traditional dairy products.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <p class="back-link"><a href="index.html">← Back to home</a></p>
+  </main>
+  <footer><div class="container footer-row"><span>CHINA / THROUGH MY EYES</span><span>Personal travel notes · HTML, CSS &amp; JS</span><a href="index.html">Home →</a></div></footer>
+</body>
+</html>
